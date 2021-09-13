@@ -7,6 +7,10 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { RootComponent } from './root/root.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,14 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     HeroFormComponent,
     RootComponent,
     ProductListComponent,
-    TopBarComponent
+    TopBarComponent,
+    ProductAlertsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

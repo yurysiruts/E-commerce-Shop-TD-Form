@@ -78,8 +78,9 @@ label {
   font-size: 14px;
   cursor: pointer;
   background-color: #1976d2;
-  color: white;
+  color: white !important;
   border: none;
+  margin: 3px 3px !important;
 }
 
 .button:hover, button:hover {
