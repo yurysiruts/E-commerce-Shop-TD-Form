@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
@@ -12,6 +13,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +25,14 @@ import { CartComponent } from './cart/cart.component';
     TopBarComponent,
     ProductAlertsComponent,
     ProductDetailComponent,
-    CartComponent
+    CartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
