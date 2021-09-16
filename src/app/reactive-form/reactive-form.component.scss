@@ -1,0 +1,12 @@
+.box {
+  margin: 10px 50px;
+}
+
+.btn-secondary {
+  background-color: rgb(196, 196, 196);
+  color: white !important;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid tomato;
+}

@@ -14,7 +14,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
-
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,

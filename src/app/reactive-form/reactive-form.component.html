@@ -1,0 +1,60 @@
+<div class="box">
+  <h3>Reactive Form</h3>
+
+<!-- Here formGroup Directive & we are binding it to MY own custom form, referencing to property: FormGroup  -->
+<!-- ngSubmit Derective to submit form -->
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+    <div formGroupName="userData">
+      <div class="form-group">
+        <label for="username">Username</label>
+      <!-- we using formControlName to tell Angular which control of our signupForm we want to set there! -->
+        <input 
+          type="text"
+          id="username"
+          formControlName="username"
+          class="form-control">
+        <span
+          *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched" 
+          class="help-block">Please enter a valid username</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+      <!-- [formControlName]="'email'" WE CAN ALSO USE PROPERTY BINDING FOR THIS PURPOSE -->
+        <input 
+          type="text"
+          id="email"
+          [formControlName]="'email'"
+          class="form-control">
+          <span
+          *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched" 
+          class="help-block">Please enter a valid email</span>
+      </div>
+    </div>
+  
+    <div formArrayName="hobbies">
+      <h4>Your Hobbies</h4>
+      <button 
+        class="btn btn-secondary" 
+        type="button" 
+        (click)="onAddHobby()">Add Hobby</button>
+      <div 
+        class="form-group"
+        *ngFor="let hobbyControl of signupForm.get('hobbies')['controls']; let i = index">
+        <input type="text" class="form-control" [formControlName]="i">
+      </div>
+    </div>
+    
+    <div class="radio" *ngFor="let sex of sexes">
+      <label>
+        <input 
+          type="radio"
+          formControlName="sex"
+          [value]="sex">{{ sex }}
+      </label>
+    </div>
+    <button 
+      class="btn btn-primary" type="submit">Submit</button>
+  </form>  
+  
+</div>
