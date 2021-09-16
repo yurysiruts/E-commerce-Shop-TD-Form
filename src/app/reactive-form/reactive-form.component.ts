@@ -19,6 +19,7 @@ export class ReactiveFormComponent implements OnInit {
     //  this.signupForm = new FormGroup({}) - like this we create simple form, without any controls
     //  controls are key-value pairs
     this.signupForm = new FormGroup({
+      // here we use nesting for our Controls, in new FormGroup which also takes a JS object
       'userData': new FormGroup({
         'username': new FormControl(null, Validators.required),
         'email': new FormControl(null, [Validators.required, Validators.email]),
@@ -29,6 +30,8 @@ export class ReactiveFormComponent implements OnInit {
     //  'username': new FormControl(initial value, single/array of Validators, ASYNC validators)
     // new FormControl() - constructor with 3 potential arg's
   }
+  // We configurating the hole form in the .ts file, 
+  // that's why we should maintain all kind of validation here!
 
   onSubmit() {
     // gaining access to the form 

@@ -14,6 +14,7 @@
           id="username"
           formControlName="username"
           class="form-control">
+      <!-- Accessing our form controls by get() method -->
         <span
           *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched" 
           class="help-block">Please enter a valid username</span>
