@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ProductDetailComponent,
     CartComponent,
     ShippingComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
