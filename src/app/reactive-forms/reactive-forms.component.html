@@ -1,30 +1,58 @@
 
 <div class="box">
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="firstname">Firstname:</label>
+  <form [formGroup]="contactForm">
+
+    <div class="form-group" [ngClass]="displayErrorMessage('firstname')">
+      <label for="firstname" class="control-label required">Firstname:</label>
       <input 
         type="text" 
         class="form-control" 
         id="firstname" 
         name="firstname" 
         formControlName="firstname">
+      <app-error-message 
+        [submitted]="submitted"
+        [displayError]="isFieldValid('firstname')" 
+        errorMsg="Please provide your firstname!!!">
+      </app-error-message>
+      <!-- <span 
+        *ngIf="!contactForm.get('firstname').valid && contactForm.get('firstname').touched" 
+        class="help-block">
+        Please enter your firstname
+      </span> -->
     </div>
-    <div class="form-group">
-      <label for="lastname">Lastname:</label>
+
+    <div class="form-group" [ngClass]="displayErrorMessage('lastname')">
+      <label for="lastname" class="control-label required">Lastname:</label>
       <input 
         type="text" 
         class="form-control" 
         id="lastname" 
         name="lastname" 
         formControlName="lastname">
+        <app-error-message 
+          [submitted]="submitted"
+          [displayError]="isFieldValid('lastname')" 
+          errorMsg="Please provide your lastname!">
+        </app-error-message>
+        <!-- <span 
+          *ngIf="!contactForm.get('lastname').valid && contactForm.get('lastname').touched" 
+          class="help-block">
+          Please enter your lastname
+        </span> -->
     </div>
-    <div class="form-group">
-      <label for="email">E-mail:</label>
+    <div class="form-group" [ngClass]="displayErrorMessage('lastname')">
+      <label for="email" class="control-label required">E-mail:</label>
       <input 
         type="text" 
         class="form-control" id="email" name="email" formControlName="email">
+        <app-error-message 
+          [submitted]="submitted"
+          [displayError]="isFieldValid('email')" 
+          errorMsg="Please enter email you would like to connect with your account!">
+        </app-error-message>
     </div>
+
     <div class="form-group">
       <div class="form-check">
         <input 
@@ -33,23 +61,36 @@
         <label for="isMarried" class="form-check-label">Married </label>
       </div>
     </div>
+
     <div formGroupName="addressData">
       <div class="form-group">
-        <label for="country">Select your Country:</label>
-        <select name="country" id="country" class="form-check-input" formControlName="address">
-          <option [value]="c" *ngFor="let c of countryList"> {{ c }}</option>
-        </select>
-      </div>
-      
-      <div class="form-group">
-        <label for="postCode">PostCode:</label>
-        <input 
-          type="text" 
-          id="postCode" 
-          name="postCode" maxlength="6"  class="form-control" formControlName="postCode">
+        <div class="col-xs-6 col-md-6">
+          <label for="country" class="control-label required">Select your Country:</label>
+          <select 
+            name="country" id="country" 
+            class="form-control" formControlName="address"
+            [ngClass]="displayRedBorder('addressData.address')">
+            <option [value]="c" *ngFor="let c of countryList"> {{ c }}</option>
+          </select>
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+          <label for="postCode" class="control-label required">PostCode:</label>
+          <input 
+            type="text" 
+            id="postCode" 
+            name="postCode" minlength="5"  
+            class="form-control" formControlName="postCode"
+            [ngClass]="displayRedBorder('addressData.postCode')">
+        </div>
       </div>
     </div>
     <button 
-    class="btn btn-primary" type="submit">Submit</button>
+      class="btn btn-primary"
+      type="submit"
+      type="button"
+      (click)="onSubmit()">
+      Submit
+    </button>
   </form>
 </div>

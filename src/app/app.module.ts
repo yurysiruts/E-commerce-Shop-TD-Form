@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ErrorMessageComponent } from './shared/error-message/error-message';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CartComponent } from './cart/cart.component';
@@ -31,7 +32,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ShippingComponent,
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    ErrorMessageComponent
   ],
   imports: [
     BrowserModule,
