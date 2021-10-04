@@ -1,0 +1,15 @@
+.col-3, .col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 2.5rem;
+
+  p {
+    font-size: 1.8rem;
+    color: #000;
+  }
+}
+
+.container-custom {
+  height: 100vh;
+}

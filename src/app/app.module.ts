@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
-import { RootComponent } from './root/root.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
@@ -18,12 +17,12 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { StartPageComponent } from './start-page/start-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroFormComponent,
-    RootComponent,
     ProductListComponent,
     TopBarComponent,
     ProductAlertsComponent,
@@ -33,7 +32,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
     ReactiveFormsComponent,
-    ErrorMessageComponent
+    ErrorMessageComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,

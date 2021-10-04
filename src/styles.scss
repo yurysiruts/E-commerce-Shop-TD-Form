@@ -8,6 +8,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+// --- SCROLL OFF ---
+
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+
 body {
   margin: 0;
 }
