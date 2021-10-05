@@ -1,6 +1,9 @@
-<h3>Shipping Prices</h3>
+<app-top-bar></app-top-bar>
+<div class="box">
+  <h3>Shipping Prices</h3>
 
-<div class="shipping-item" *ngFor="let cost of shippingCosts | async">
-  <span> {{ cost.type }} </span>
-  <span> {{ cost.price }} </span>
+  <div class="shipping-item" *ngFor="let cost of shippingCosts | async">
+    <span> {{ cost.type }} </span>
+    <span> {{ cost.price }} </span>
+  </div>
 </div>

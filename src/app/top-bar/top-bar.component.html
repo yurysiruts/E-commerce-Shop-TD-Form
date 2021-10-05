@@ -1,9 +1,14 @@
-<a  routerLink="">
-  <h1>E-commerce Store</h1>
-</a>
+<div class="box">
+  <a  routerLink="/products">
+    <h1>E-commerce Store</h1>
+  </a>
+  
+  <a 
+    class="button fancy-button"
+    routerLink="/cart">
+      <i class="material-icons">shopping_cart</i>Checkout
+  </a>
+</div>
 
-<a 
-  class="button fancy-button"
-  routerLink="/cart">
-    <i class="material-icons">shopping_cart</i>Checkout
-</a>
+
+<router-outlet></router-outlet>
