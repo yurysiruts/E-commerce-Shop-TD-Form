@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { OnStart } from '../shared/on-start';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -9,6 +10,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./reactive-form.component.scss']
 })
 export class ReactiveFormComponent implements OnInit {
+
+  constructor(private startPage: OnStart) {}
 
   public sexes = ["male", "female"];
     
@@ -70,6 +73,11 @@ export class ReactiveFormComponent implements OnInit {
       }, 1500);
     });
     return promise;
+  }
+
+  // Go on /start page
+  onStart() {
+    this.startPage.onStart();
   }
 
 

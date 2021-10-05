@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OnStart } from '../shared/on-start';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -13,12 +14,15 @@ export class TemplateDrivenFormComponent {
     new country("3", "China"),
   ];
 
-  constructor() {}
+  constructor(private startPage: OnStart) {}
 
   onSubmit(contactForm) {
     console.log(contactForm.value)
   }
 
+  onStart() {
+    this.startPage.onStart();
+  }
 }
 
 export class country {

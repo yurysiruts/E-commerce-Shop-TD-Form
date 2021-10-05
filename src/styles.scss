@@ -153,3 +153,22 @@ app-top-bar h1 {
   width: 250px;
   margin: 3px 0;
 }
+
+.back-btn {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+svg.back {
+  cursor: pointer;
+  color: brown;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+svg.back:hover {
+  background-color: rgb(255, 180, 180);
+  transform: scale(103%);
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { OnStart } from '../shared/on-start';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -13,7 +14,7 @@ export class ReactiveFormsComponent implements OnInit {
   
   public contactForm: FormGroup;
 
-  constructor() { }
+  constructor(private startPage: OnStart) {}
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -71,5 +72,9 @@ export class ReactiveFormsComponent implements OnInit {
     }
   }
 
+    // Go on /start page
+    onStart() {
+      this.startPage.onStart();
+    }
 
 }

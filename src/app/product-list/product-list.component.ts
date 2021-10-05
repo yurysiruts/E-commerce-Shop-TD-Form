@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { OnStart } from '../shared/on-start';
 
 import { products } from '../shared/products';
 
@@ -7,7 +8,7 @@ import { products } from '../shared/products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
 
   products = products;
 
@@ -19,9 +20,10 @@ export class ProductListComponent implements OnInit {
     window.alert('You will be notified when the product goes on sale');
   }
 
-  constructor() { }
+  constructor(private startPage: OnStart) {}
 
-  ngOnInit(): void {
+  onStart() {
+    this.startPage.onStart();
   }
 
 }

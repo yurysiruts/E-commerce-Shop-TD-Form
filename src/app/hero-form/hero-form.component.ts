@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { OnStart } from '../shared/on-start';
 
 import { Hero } from '../shared/hero';
 
@@ -8,6 +10,8 @@ import { Hero } from '../shared/hero';
   styleUrls: ['./hero-form.component.scss']
 })
 export class HeroFormComponent {
+
+  constructor(private router: Router, private startPage: OnStart) {}
 
   powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
 
@@ -21,6 +25,10 @@ export class HeroFormComponent {
 
   createNewHero() {
     this.model = new Hero(42, '', '');
+  }
+
+  onStart() {
+    this.startPage.onStart();
   }
 }
 

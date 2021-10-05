@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Product, products } from '../shared/products';
 import { CartService } from '../shared/cart.service';
+import { OnStart } from '../shared/on-start';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,7 +16,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private catrService: CartService) { }
+    private catrService: CartService,
+    private startPage: OnStart) { }
 
   ngOnInit(): void {
     // Getting the product id from the current route.
@@ -34,5 +36,9 @@ export class ProductDetailComponent implements OnInit {
   addToCart(product: Product) {
     this.catrService.addToCart(product);
     window.alert('Your product has been added to the cart!');
+  }
+
+  onStart() {
+    this.startPage.onStart();
   }
 }

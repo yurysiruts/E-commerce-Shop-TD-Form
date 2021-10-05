@@ -1,35 +1,45 @@
 <div class="container">
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-    <div class="form-group">
-      <label for="firstname">First Name</label>
-      <input type="text" required id="firstname" name="firstname" class="form-control" ngModel>
-    </div>
-    <div class="form-group">
-      <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" name="lastname" class="form-control" ngModel>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" class="form-control" ngModel>
-    </div>
-    <div class="form-group">
-      <label for="country">Country</label>
-      <select name="country" required id="country" class="form-control" ngModel>
-        <option selected="" value=""></option>
-        <option [ngValue]="c.id" *ngFor="let c of countryList">
-          {{ c.name }}
-        </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <button [disabled]="!contactForm.valid" class="btn btn-primary" type="submit">Submit</button>
-    </div>
-
-  </form>
+  <div class="container-custom col-md-7">
+    <h3>Template-Driven Form</h3>
+    
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" required id="firstname" name="firstname" class="form-control" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" class="form-control" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select name="country" required id="country" class="form-control" ngModel>
+          <option selected="" value=""></option>
+          <option [ngValue]="c.id" *ngFor="let c of countryList">
+            {{ c.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button [disabled]="!contactForm.valid" class="btn btn-primary" type="submit">Submit</button>
+      </div>
+  
+    </form>
+  </div>
+  
 </div>
 <div class="container">
   <pre>Value : {{contactForm.value | json }}</pre>
   <pre>Valid : {{contactForm.valid}} </pre>
   <pre>Touched : {{contactForm.touched  }} </pre>
   <pre>Submitted : {{contactForm.submitted  }} </pre>
+</div>
+
+<div class="back-btn"
+  (click)="onStart()">
+  <svg class="back" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.222 18.917c5.666-5.905-.629-10.828-5.011-7.706l1.789 1.789h-6v-6l1.832 1.832c7.846-6.07 16.212 4.479 7.39 10.085z"/></svg>
 </div>

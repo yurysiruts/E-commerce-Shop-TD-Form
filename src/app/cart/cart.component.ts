@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-
+import { OnStart } from '../shared/on-start';
 
 import { CartService } from '../shared/cart.service';
 
@@ -20,7 +20,8 @@ export class CartComponent {
 
   constructor(
     private cartService: CartService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private startPage: OnStart
   ) { }
 
   onSubmit(): void {
@@ -29,4 +30,7 @@ export class CartComponent {
     this.checkoutForm.reset();
   }
 
+  onStart() {
+    this.startPage.onStart();
+  }
 }
