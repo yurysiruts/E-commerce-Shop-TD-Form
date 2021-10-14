@@ -1,0 +1,13 @@
+<div class="box" *ngIf="items">
+    <div
+      class="col-lg-3 col-md-6 col-sm-12 border image-container" 
+      id="imgs" 
+      style="height:40vh"
+      *ngFor="let item of items">
+      <img 
+          src="{{ item.urls.small }}" 
+          alt="{{ item.alt_description }}"
+          style="margin: 10px 20px;">
+    </div>  
+  
+</div>

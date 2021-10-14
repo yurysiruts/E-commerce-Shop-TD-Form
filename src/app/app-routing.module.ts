@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { GalleryComponent } from './gallery/gallery.component'
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/start', pathMatch: 'full'},
@@ -24,11 +25,11 @@ const appRoutes: Routes = [
     children: [
       { path: '', component: ProductListComponent },
       { path: ':productId', component: ProductDetailComponent },
-      
     ]
   },
   { path: 'cart', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
+  { path: 'gallery', component: GalleryComponent}
 ];
 
 @NgModule({
