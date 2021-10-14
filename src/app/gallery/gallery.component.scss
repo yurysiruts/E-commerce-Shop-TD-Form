@@ -1,40 +1,55 @@
+.cover {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
 .box {
   box-shadow: 2px 2p 5px rgba(0, 0, 0, 0.3);
-  height: 530px;
-  width: 500px;
   overflow: hidden;
 }
 
 .image-container {
   display: flex;
+  height:40vh;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
 
 img {
-  width: 500px;
-  height: 500px;
   object-fit: cover;
+  margin: 10px 20px;
 }
 
-// .buttons-container {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
 
-// .btn {
-//   background-color: rebeccapurple;
-//   color: #fff;
-//   border: none;
-//   padding: 0.5rem;
-//   cursor: pointer;
-//   width: 49.5%;
-// }
+.btn {
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+}
 
-// .btn:hover {
-//   opacity: 0.9;
-// }
+.btn:hover {
+  opacity: 0.9;
+  color: burlywood;
+}
 
-// .btn:focus {
-//   outline: none;
-// }
+.btn[disabled]:hover{
+  opacity: 0.65;
+  cursor: not-allowed;
+  color: red;
+}
+
+.btn:focus {
+  outline: none;
+}

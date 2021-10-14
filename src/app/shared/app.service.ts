@@ -8,7 +8,7 @@ export class AppService {
 
   public  key = "QD4lef4X-U9OFzD9CZ1F0m_9mJe9fACpRMNcC2akhs4"; 
   public  page = 1;
-  public  per_page = 20;
+  public  per_page = 30;
 
   constructor( private http: HttpClient ) { }
 

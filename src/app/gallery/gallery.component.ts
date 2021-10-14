@@ -10,6 +10,9 @@ import { Subscription } from 'rxjs';
 export class GalleryComponent implements OnInit {
 
   public items = null;
+  public visible = false;
+  public actual = null;
+  public i: number;
 
   constructor(
     private apiService: AppService,
@@ -19,7 +22,21 @@ export class GalleryComponent implements OnInit {
     this.apiService.getImage().subscribe((response: any) => {
       console.log(response);
       this.items = response;
+      this.i = 0;
+      this.actual = this.items[this.i].urls.full;
     });
+  }
+  
+  onPrev() {
+    this.i-=1;
+    this.actual = this.items[this.i].urls.full;
+    console.log(this.i);
+  }
+
+  onNext() {
+    this.i+=1;
+    this.actual = this.items[this.i].urls.full;
+    console.log(this.i);
   }
 
   // ngOnDestroy(): void {
