@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AppService } from '../shared/app.service';
-import { Subscription } from 'rxjs';
+import { OnStart } from '../shared/on-start';
 
 @Component({
   selector: 'app-gallery',
@@ -16,6 +16,7 @@ export class GalleryComponent implements OnInit {
 
   constructor(
     private apiService: AppService,
+    private startPage: OnStart
   ) { }
 
   ngOnInit() {
@@ -42,5 +43,9 @@ export class GalleryComponent implements OnInit {
   // ngOnDestroy(): void {
   //   this.imageSub.unsubscribe();
   // }
-
+  
+  // Go on /start page
+  onStart() {
+    this.startPage.onStart();
+  }
 }

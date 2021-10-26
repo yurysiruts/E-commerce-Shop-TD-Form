@@ -19,6 +19,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { StartPageComponent } from './start-page/start-page.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { TdFormComponent } from './td-form/td-form.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     ErrorMessageComponent,
     StartPageComponent,
     GalleryComponent,
+    TdFormComponent,
   ],
   imports: [
     BrowserModule,

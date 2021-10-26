@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row row-mrgn">
+    <div class="col-1 col-sm-1	col-md-1	col-lg-1	col-xl-1"></div>
+    <div class="col-10 col-sm-10	col-md-10	col-lg-10	col-xl-10">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Template-Driven Form in @Angular2</h3>
+        </div>
+        <div class="card-body">
+          <form #deliveryForm="ngForm">
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control" placeholder="...">
+              </div>
+              <div class="col">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control" placeholder="...">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="...">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="inputAddress" 
+                placeholder="...">
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button 
+            type="submit" 
+            class="btn btn-warning btn-lg btn-block" 
+            (click)="onSubmit(deliveryForm)">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-1 col-sm-1	col-md-1	col-lg-1	col-xl-1"></div>
+  </div>
+</div>
