@@ -1,0 +1,27 @@
+<h4>Component B</h4>
+
+<form [formGroup]="form">
+  <ng-container formArrayName="options">
+    <ng-container *ngFor="let optionForm of options.controls; let i = index">
+      <h5>Opcja {{ i + 1 }}</h5>
+      <form [formGroup]="optionForm" class="row">
+        <div class="col-xs-6">
+          <label for="optionName">Nazwa opcji</label>
+          <input  formControlName="name"  id="optionName">
+        </div>
+        <div class="col-xs-6">
+          <label for="optionValue">Wartosc opcji</label>
+        <input  formControlName="value"  id="optionValue">
+        </div>
+        
+        <button (click)="onDeleteLesson(i)" class="delete-btn">
+          delete
+        </button>
+      </form>
+    </ng-container>
+  </ng-container>
+
+  <button (click)="onAddLesson()">
+    <button>Add</button>
+  </button>
+</form>

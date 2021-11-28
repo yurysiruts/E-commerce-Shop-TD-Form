@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TdFormComponent {
 
   onSubmit(form) {
-    alert("Something")
+    console.log(form);
+    console.log(form.value);
   }
 
 }

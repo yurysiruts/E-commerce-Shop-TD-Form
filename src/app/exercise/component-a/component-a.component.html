@@ -1,0 +1,13 @@
+<h4>Component A</h4>
+
+<div *ngFor="let option of options">
+  <input class="form-check-input" (click)="onChose($event)"
+    type="radio" 
+    name="same" 
+    [id]="option.value" 
+    [value]="option.value">
+  <label class="form-check-label" [for]="option.value">{{ option.name }}</label> 
+</div>
+
+<p>Wybrana opcja:</p>
+<b>{{ radio }}</b>

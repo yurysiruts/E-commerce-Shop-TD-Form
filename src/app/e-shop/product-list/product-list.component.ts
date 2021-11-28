@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { OnStart } from '../shared/on-start';
+import { OnStart } from '../../shared/on-start';
 
-import { products } from '../shared/products';
+import { products } from '../../shared/products';
 
 @Component({
   selector: 'app-product-list',

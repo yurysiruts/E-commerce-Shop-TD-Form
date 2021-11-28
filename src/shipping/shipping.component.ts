@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { OnStart } from '../shared/on-start';
+import { OnStart } from '../app/shared/on-start';
 
-import { CartService } from '../shared/cart.service';
+import { CartService } from '../app/shared/cart.service';
 
 @Component({
   selector: 'app-shipping',
