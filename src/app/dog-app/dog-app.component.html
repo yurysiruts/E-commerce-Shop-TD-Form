@@ -1,0 +1,35 @@
+<div class="center">
+  <div class="box">
+    <h3>Dog App using RxJS</h3>
+    <p>
+      Start polling to request random
+      <a target="_blank" href="https://dog.ceo/dog-api/">dog</a> images!
+    </p>
+    <p>
+      Polling Status:
+      <span>{{ pollingStatus ? "Polling" : "Stopped" }}</span>
+    </p>
+    <div class="btn-wrapper">
+      <button class="btn btn-primary" (click)="onPoll()">Start Polling</button>
+      <button class="btn btn-warning" (click)="onEndPoll()" #stopPoll>
+        Stop Polling
+      </button>
+    </div>
+    <div class="img-wrapper">
+      <img [src]="dogImg" alt="dog_img" />
+    </div>
+  </div>
+</div>
+<div class="back-btn" (click)="onStart()">
+  <svg
+    class="back"
+    xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.222 18.917c5.666-5.905-.629-10.828-5.011-7.706l1.789 1.789h-6v-6l1.832 1.832c7.846-6.07 16.212 4.479 7.39 10.085z"
+    />
+  </svg>
+</div>

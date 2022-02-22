@@ -23,6 +23,7 @@ import { TdFormComponent } from './td-form/td-form.component';
 import { ComponentAComponent } from './exercise/component-a/component-a.component';
 import { ComponentBComponent } from './exercise/component-b/component-b.component';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { DogAppComponent } from './dog-app/dog-app.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ExerciseComponent } from './exercise/exercise.component';
     ComponentAComponent,
     ComponentBComponent,
     ExerciseComponent,
+    DogAppComponent,
   ],
   imports: [
     BrowserModule,

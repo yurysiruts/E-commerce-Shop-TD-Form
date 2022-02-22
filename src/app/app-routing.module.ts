@@ -14,6 +14,8 @@ import { TopBarComponent } from './e-shop/top-bar/top-bar.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { TdFormComponent } from './td-form/td-form.component';
 import { ExerciseComponent } from './exercise/exercise.component';
+import { DogAppComponent } from './dog-app/dog-app.component';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/start', pathMatch: 'full'},
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
   { path: 'shipping', component: ShippingComponent },
   { path: 'gallery', component: GalleryComponent},
   { path: 'tdform', component: TdFormComponent},
-  { path: 'exercise', component: ExerciseComponent}
+  { path: 'exercise', component: ExerciseComponent},
+  { path: 'dog-api', component: DogAppComponent},
 ];
 
 @NgModule({

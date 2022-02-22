@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class DogService {\n  constructor(http) {\n    this.http = http;\n    this.dogURL = 'https://dog.ceo/api/breeds/image/random';\n  }\n\n  getDog() {\n    return this.http.get(this.dogURL);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Hero {\n  constructor(id, name, power, alterEgo) {\n    this.id = id;\n    this.name = name;\n    this.power = power;\n    this.alterEgo = alterEgo;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
